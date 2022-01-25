@@ -24,7 +24,7 @@ if (script === undefined) {
   // Internet Explorer :(
   // tslint:disable-next-line:max-line-length
   script = document.querySelector(
-    'script[src^="http://localhost:4000/client.js"]'
+    'script[src^="https://utteranc-lib.hashpire.io/client.js"],script[src^="http://localhost:4000/client.js"]'
   ) as HTMLScriptElement;
 }
 
@@ -99,8 +99,9 @@ document.head.insertAdjacentHTML(
 
 // create the comments iframe and it's responsive container
 const utterancesOrigin = script.src.match(
-  /^https:\/\/utteranc\.es|http:\/\/localhost:\d+/
+  /^https:\/\/utteranc-lib.hashpire\.io|http:\/\/localhost:\d+/
 )![0];
+
 const url = `${utterancesOrigin}/utterances.html`;
 script.insertAdjacentHTML(
   "afterend",

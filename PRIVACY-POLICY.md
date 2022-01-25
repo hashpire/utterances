@@ -1,12 +1,12 @@
 # Privacy Policy
 
-Utterances operates the https://utteranc.es website, which provides the SERVICE.
+Utterances operates the https://utteranc-lib.hashpire.io website, which provides the SERVICE.
 
 This page is used to inform website visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service.
 
 If you choose to use our Service, then you agree to the collection and use of information in relation with this policy. The Personal Information that we collect are used for providing and improving the Service. We will not use or share your information with anyone except as described in this Privacy Policy.
 
-The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible at https://utteranc.es , unless otherwise defined in this Privacy Policy.
+The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible at https://utteranc-lib.hashpire.io , unless otherwise defined in this Privacy Policy.
 
 ## Information Collection and Use
 
@@ -24,7 +24,7 @@ Utterances sets a cookie to store the github api token.
 
 We may employ third-party companies and individuals due to the following reasons:
 
-* Utterances uses GitHub issues to store issues and comments.
+- Utterances uses GitHub issues to store issues and comments.
 
 ## Security
 
