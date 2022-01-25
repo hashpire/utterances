@@ -1447,11 +1447,11 @@ var TimelineComponent = function () {
     this.issue = issue;
     this.timeline = [];
     this.count = 0;
-    this.element = document.createElement('main');
-    this.element.classList.add('timeline');
-    this.element.innerHTML = "\n      <h1 class=\"timeline-header\">\n        <a class=\"text-link\" target=\"_blank\"></a>\n        <em>\n          - powered by\n          <a class=\"text-link\" href=\"https://utteranc.es\" target=\"_blank\">utteranc.es</a>\n        </em>\n      </h1>";
+    this.element = document.createElement("main");
+    this.element.classList.add("timeline");
+    this.element.innerHTML = "\n      <h1 class=\"timeline-header\">\n        <a class=\"text-link\" target=\"_blank\"></a>\n        <em>\n          - powered by\n          <a class=\"text-link\" href=\"https://utteranc-lib.hashpire.io\" target=\"_blank\">utteranc.es</a>\n        </em>\n      </h1>";
     this.countAnchor = this.element.firstElementChild.firstElementChild;
-    this.marker = document.createComment('marker');
+    this.marker = document.createComment("marker");
     this.element.appendChild(this.marker);
     this.setIssue(this.issue);
     this.renderCount();
@@ -1476,7 +1476,7 @@ var TimelineComponent = function () {
       this.countAnchor.href = issue.html_url;
       this.renderCount();
     } else {
-      this.countAnchor.removeAttribute('href');
+      this.countAnchor.removeAttribute("href");
     }
   };
 
@@ -1512,14 +1512,14 @@ var TimelineComponent = function () {
     var insertAfterElement = this.timeline.find(function (x) {
       return x.comment.id >= insertAfter.id;
     }).element;
-    insertAfterElement.insertAdjacentHTML('afterend', "\n      <div class=\"page-loader\">\n        <div class=\"zigzag\"></div>\n        <button type=\"button\" class=\"btn btn-outline btn-large\">\n          " + count + " hidden items<br/>\n          <span>Load more...</span>\n        </button>\n      </div>\n    ");
+    insertAfterElement.insertAdjacentHTML("afterend", "\n      <div class=\"page-loader\">\n        <div class=\"zigzag\"></div>\n        <button type=\"button\" class=\"btn btn-outline btn-large\">\n          " + count + " hidden items<br/>\n          <span>Load more...</span>\n        </button>\n      </div>\n    ");
     var element = insertAfterElement.nextElementSibling;
     var button = element.lastElementChild;
     var statusSpan = button.lastElementChild;
     button.onclick = callback;
     return {
       setBusy: function setBusy() {
-        statusSpan.textContent = 'Loading...';
+        statusSpan.textContent = "Loading...";
         button.disabled = true;
       },
       remove: function remove() {
@@ -1530,7 +1530,7 @@ var TimelineComponent = function () {
   };
 
   TimelineComponent.prototype.renderCount = function () {
-    this.countAnchor.textContent = this.count + " Comment" + (this.count === 1 ? '' : 's');
+    this.countAnchor.textContent = this.count + " Comment" + (this.count === 1 ? "" : "s");
   };
 
   return TimelineComponent;
