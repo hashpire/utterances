@@ -247,7 +247,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.UTTERANCES_API = void 0;
-var UTTERANCES_API = 'https://api.utteranc.es';
+var UTTERANCES_API = "https://utteranc-worker.hashpire.io";
 exports.UTTERANCES_API = UTTERANCES_API;
 },{}],"oauth.ts":[function(require,module,exports) {
 "use strict";
@@ -2218,7 +2218,7 @@ function renderComments(issue, timeline) {
             pageLoads.push((0, _github.loadCommentsPage)(issue.number, pageCount));
           }
 
-          if (pageCount > 2 && issue.comments % _github.PAGE_SIZE < 3) {
+          if (pageCount > 2 && issue.comments % _github.PAGE_SIZE < 3 && issue.comments % _github.PAGE_SIZE !== 0) {
             pageLoads.push((0, _github.loadCommentsPage)(issue.number, pageCount - 1));
           }
 
