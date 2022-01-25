@@ -1449,7 +1449,7 @@ var TimelineComponent = function () {
     this.count = 0;
     this.element = document.createElement("main");
     this.element.classList.add("timeline");
-    this.element.innerHTML = "\n      <h1 class=\"timeline-header\">\n        <a class=\"text-link\" target=\"_blank\"></a>\n        <em>\n          - powered by\n          <a class=\"text-link\" href=\"https://utteranc-lib.hashpire.io\" target=\"_blank\">utteranc.es</a>\n        </em>\n      </h1>";
+    this.element.innerHTML = "\n      <h1 class=\"timeline-header\">\n        <a class=\"text-link\" target=\"_blank\"></a>\n        <em>\n          - powered by\n          <a class=\"text-link\" href=\"https://utteranc-lib.hashpire.io\" target=\"_blank\">utteranc-lib.hashpire.io</a>\n        </em>\n      </h1>";
     this.countAnchor = this.element.firstElementChild.firstElementChild;
     this.marker = document.createComment("marker");
     this.element.appendChild(this.marker);
